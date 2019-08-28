@@ -72,7 +72,7 @@ const sendToRedux = (event, id, cb) => {
 
 export default (props) => {
   const deleteItem = (e) => {
-    event.preventDefault()
+    e.preventDefault()
 
     sendToRedux(e, props.id, props.remove)
     setPopupVisible(!visible)
