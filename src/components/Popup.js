@@ -15,13 +15,6 @@ const Popup = styled.div`
 
 export default (props) => {
   return (
-    <Popup style={(props.visible ? {display: 'flex'} : {})}>
-      {props.item.name} will permanently deleted. Are you sure?
-
-      <div>
-        <button>Yes</button>
-        <button>No</button>
-      </div>
-    </Popup>
+    <Popup style={(props.visible ? {display: 'flex'} : {})} />
   )
 }

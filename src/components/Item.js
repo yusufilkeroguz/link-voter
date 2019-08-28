@@ -71,6 +71,12 @@ const sendToRedux = (event, id, cb) => {
 }
 
 export default (props) => {
+  const deleteItem = (e) => {
+    event.preventDefault()
+
+    sendToRedux(e, props.id, props.remove)
+  }
+
   const [ visible, setPopupVisible ] = useState(false)
 
   return (
@@ -96,7 +102,14 @@ export default (props) => {
 
       <Delete onClick={() => { setPopupVisible(!visible) }} />
 
-      <Popup item={props.link} visible={visible} />
+      <Popup item={props.link} visible={visible}>
+        {props.item.name} will permanently deleted. Are you sure?
+
+        <div>
+          <button onClick={(e) => { deleteItem(e) }}>Yes</button>
+          <button onClick={() => { setPopupVisible(!visible) }}>No</button>
+        </div>
+      </Popup>
     </Item>
   )
 }
