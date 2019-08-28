@@ -1,4 +1,4 @@
-const STORAGE_NAME = 'links'
+const STORAGE_NAME = 'state'
 
 export const loadState = () => {
   try {

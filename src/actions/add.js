@@ -1,7 +1,10 @@
-let nextId = 0
+const DEFAULT_VOTE = 0
 
-export const add = () => ({
-  id: nextId++,
+export const add = ({ name, link }) => ({
   type: 'add',
-  payload: 'add'
+  payload: {
+    name,
+    link,
+    vote: DEFAULT_VOTE
+  }
 })

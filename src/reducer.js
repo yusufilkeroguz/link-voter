@@ -1,8 +1,3 @@
-import { combineReducers } from 'redux';
-import addReducer from './reducers/add';
-import removeReducer from './reducers/remove';
+import links from './reducers/links';
 
-export default combineReducers({
-  addReducer,
-  removeReducer
-});
+export default links;
