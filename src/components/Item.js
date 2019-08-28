@@ -75,6 +75,7 @@ export default (props) => {
     event.preventDefault()
 
     sendToRedux(e, props.id, props.remove)
+    setPopupVisible(!visible)
   }
 
   const [ visible, setPopupVisible ] = useState(false)
