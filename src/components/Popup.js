@@ -15,6 +15,8 @@ const Popup = styled.div`
 
 export default (props) => {
   return (
-    <Popup style={(props.visible ? {display: 'flex'} : {})} />
+    <Popup style={(props.visible ? {display: 'flex'} : {})}>
+      {props.children}
+    </Popup>
   )
 }

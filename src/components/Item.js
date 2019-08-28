@@ -104,7 +104,7 @@ export default (props) => {
       <Delete onClick={() => { setPopupVisible(!visible) }} />
 
       <Popup item={props.link} visible={visible}>
-        {props.item.name} will permanently deleted. Are you sure?
+        {props.name} will permanently deleted. Are you sure?
 
         <div>
           <button onClick={(e) => { deleteItem(e) }}>Yes</button>
