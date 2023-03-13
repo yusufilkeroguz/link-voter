@@ -17,7 +17,7 @@ const FormGroup = styled.div`
   }
 `
 
-export default (props) => {
+const FormGroupComponent = (props) => {
   return (
     <FormGroup>
       <Label htmlFor={props.id||'undefined'}>{props.name||'undefined'}:</Label>
@@ -25,3 +25,5 @@ export default (props) => {
     </FormGroup>
   )
 }
+
+export default FormGroupComponent

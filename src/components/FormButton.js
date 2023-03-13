@@ -2,7 +2,7 @@ import React from 'react'
 import Button from './../components/Button'
 import styled from '@emotion/styled'
 
-const FormGroup = styled.div`
+const FormButton = styled.div`
   flex-basis: 100%;
   flex-grow: 0;
   flex-wrap: nowrap;
@@ -13,12 +13,14 @@ const FormGroup = styled.div`
   }
 `
 
-export default (props) => {
+const FormButtonComponent = (props) => {
   return (
-    <FormGroup>
+    <FormButton>
       <Button {...props}>
         {props.text}
       </Button>
-    </FormGroup>
+    </FormButton>
   )
 }
+
+export default FormButtonComponent

@@ -1,8 +1,6 @@
-import React from 'react'
-
 import { connect } from 'react-redux'
 import styled from '@emotion/styled'
-import { css, jsx } from "@emotion/core";
+import { css } from "@emotion/core";
 
 import { add } from '../actions/add'
 import { Link } from "react-router-dom";
@@ -11,8 +9,7 @@ import Header from './../components/Header'
 import Container from './../components/Container'
 import FormGroup from './../components/FormGroup'
 import FormButton from './../components/FormButton'
-
-/** @jsx jsx */
+import { Component } from 'react';
 
 const linkStyle = css`
   width: 100%;
@@ -44,7 +41,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 
-class AddLink extends React.Component {
+class AddLink extends Component {
   constructor(props) {
     super(props)
 
